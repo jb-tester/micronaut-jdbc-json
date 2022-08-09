@@ -1,0 +1,1 @@
+## @io.micronaut.data.annotation.TypeDef test

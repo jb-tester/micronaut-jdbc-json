@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: micronautJdbcJson
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/micronaut?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: irina
+    password: jolt
+    db-type: mysql
+    dialect: MYSQL
+
+netty:
+  default:
+    allocator:
+      max-order: 3

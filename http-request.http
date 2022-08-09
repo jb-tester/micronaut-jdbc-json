@@ -1,0 +1,9 @@
+###mappedEntity_all
+GET http://localhost:8080/all_mapped_entities
+
+###entity_all
+GET http://localhost:8080/all_entities
+
+
+
+###
