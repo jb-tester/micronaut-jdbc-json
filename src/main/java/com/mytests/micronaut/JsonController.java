@@ -6,6 +6,7 @@ import com.mytests.micronaut.model.mapped_entities.JsonSampleMappedEntity;
 import com.mytests.micronaut.model.mapped_entities.JsonSampleMappedEntityRepository;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.PathVariable;
 import jakarta.inject.Inject;
 
 import java.util.List;
@@ -28,5 +29,8 @@ public class JsonController {
     public List<JsonSampleMappedEntity> getAllMappedEntities() {
         return (List<JsonSampleMappedEntity>) mappedEntityRepository.findAll();
     }
-
+    @Get("/mappingEntitiesByProp/{prop}")
+    public List<JsonSampleMappedEntity> getByProp(@PathVariable String prop) {
+        return mappedEntityRepository.findByProperties(prop);
+    }
 }
